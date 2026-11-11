@@ -1,17 +1,9 @@
 def solution(n):
-    answer = 0
+    a = 0
     if n % 2 == 1 :
-        for i in range(n+1) :
-            if i % 2 == 0 :
-                continue
-            else :
-                answer += i
-            print(answer)
+        a = n // 2 + 1
+        answer = a**2
     else :
-        for i in range(n+1) :
-            if i % 2 == 1 :
-                continue
-            else :
-                answer += i*i
-            print(i)
+        a = n // 2
+        answer = 4*a*(a+1)*(2*a+1)/6
     return answer
